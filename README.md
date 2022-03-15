@@ -1,6 +1,7 @@
 11-Mar-2022
 
 ## TailwindCSS CLI installation process step by step...
+## HTML + CSS + JS base environment...
 
 1. npm init -y
 2. npm i -D tailwindcss
@@ -24,3 +25,8 @@
     + otherwise tailwind don't work properly
 
 8. npm run build 
+
+<br/>
+<br/>
+
+<img src="./demo.gif" style="display: block; margin: 0 auto;"/>
