@@ -1,14 +1,10 @@
 module.exports = {
-  mode: 'jit',
-  content: ['./**/*.html'],
-  darkMode: "class",
-  //content: ['./**/*.{js,jsx,ts,tsx}'],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
+  ],
   theme: {
-    extend: {
-      rotate: {
-        '360': '360deg',
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }

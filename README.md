@@ -1,32 +1,34 @@
-11-Mar-2022
+15 - March - 2022
 
-## TailwindCSS CLI installation process step by step...
-## HTML + CSS + JS base environment...
+# Modal in React + Tailwind 
 
-1. npm init -y
-2. npm i -D tailwindcss
-3. npx tailwindcss init
-4. create + linking ==> html + css + js files
-5. create ==> .vscode/settings.json file & 
-```    
-{
-    "css.validate": false,
-    "tailwindCSS.emmetCompletions": true
-}  
-```     
-6. inside package.json file, write build cmd 
+## Project is created by React `Yarn`
+
+## Package Installed... 
+
+* yarn create react-app testing
+* yarn add -D tailwindcss postcss autoprefixer 
+* npx tailwindcss init -p
+
+* go to >>> `tailwind.config.js` file & add these lines...
+
 ```
-"scripts": {
-    "build": "tailwindcss -i ./src/tailwind.css -o ./assets/css/style.css -w"
-}
+content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
+],
 ```
 
-7. must add `'./**/*.html'` inside tailwind.config.js > content:[ ]
-    + otherwise tailwind don't work properly
+* must add tailwind directives into `index.css` file
 
-8. npm run build 
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+* if you clone this repo, <br> 1st must run ==> `yarn`
 
 <br/>
-<br/>
 
-<img src="./demo.gif" style="width: 100%; height: 100%;"/>
+<img src="./demo.gif" style="width: 100%; height: 100%;" />
