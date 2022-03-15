@@ -29,4 +29,4 @@
 <br/>
 <br/>
 
-<img src="./demo.gif" style="display: block; margin: 0 auto;"/>
+<img src="./demo.gif" style="width: 100%; height: 100%;"/>
