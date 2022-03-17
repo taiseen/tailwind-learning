@@ -36,3 +36,5 @@ content: [
 ```
 
 + if you clone this repo, <br> 1st must run ==> `yarn` 
+
+Font Awesome CDN link (v-6.1.0) use here.

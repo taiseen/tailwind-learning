@@ -23,9 +23,9 @@ const NavBar = () => {
                 ${toggleNav ? 'fa-times' : 'fa-bars'}`}></i>
 
 
-            <nav className={`absolute top-[110%] w-full flex flex-col text-xl duration-300  origin-top-right
-                             md:static md:w-max md:flex-row md:space-x-10 md:scale-100
-                             ${toggleNav ? 'scale-100' : 'scale-0'}`}>
+            <nav className={`absolute top-[110%] w-full flex flex-col text-xl duration-200 ease-in-out 
+                             md:static md:w-max md:flex-row md:space-x-10 md:on
+                             ${toggleNav ? 'on' : 'off'}`}>
                 {
                     links.map((goTo, i) => (
                         <Link
