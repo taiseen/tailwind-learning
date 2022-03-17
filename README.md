@@ -38,3 +38,13 @@ content: [
 + if you clone this repo, <br> 1st must run ==> `yarn` 
 
 Font Awesome CDN link (v-6.1.0) use here.
+
+<br/>
+
+# Demo 1 <br/>
+<img src="./demo-1.gif" />
+
+<br/>
+
+# Demo 2 <br/>
+<img src="./demo-2.gif" />

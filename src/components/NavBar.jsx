@@ -23,7 +23,7 @@ const NavBar = () => {
                 ${toggleNav ? 'fa-times' : 'fa-bars'}`}></i>
 
 
-            <nav className={`absolute top-[110%] w-full flex flex-col text-xl duration-200 ease-in-out 
+            <nav className={`absolute top-[110%] w-full flex flex-col text-xl duration-300 ease-in-out 
                              md:static md:w-max md:flex-row md:space-x-10 md:on
                              ${toggleNav ? 'on' : 'off'}`}>
                 {
@@ -32,7 +32,7 @@ const NavBar = () => {
                             key={i}
                             to={goTo.link}
                             onClick={() => setToggleNav(!toggleNav)}
-                            className=" bg-red-800 mx-3 my-1 p-2 rounded 
+                            className="bg-red-800 mx-3 my-1 p-2 rounded 
                             md:bg-transparent md:my-0 md:p-0  
                             hover:text-gray-200 hover:underline decoration-red-300 underline-offset-4 duration-100">
                             {goTo.name}
