@@ -1,7 +1,5 @@
-
 const NavBar = ({ filterHandler, filter }) => {
 
-  console.log(filter);
   const links = [
     { name: 'all' },
     { name: 'blog' },
@@ -9,9 +7,6 @@ const NavBar = ({ filterHandler, filter }) => {
     { name: 'fruits' },
     { name: 'place' },
   ]
-
-  const activeClick = links.filter(link => link.name === filter);
-  console.log(activeClick[0].name)
 
   return (
     <ul className="flex items-center justify-center flex-wrap py-5 text-center">

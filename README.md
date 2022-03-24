@@ -5,10 +5,13 @@
 ## Project is created by React `Yarn`
 
 ## Package Installed... 
-
 + yarn create react-app testing
 + yarn add `-D` tailwindcss postcss autoprefixer 
 + npx tailwindcss init -p
+
+## Need Full Plugins
++ yarn add simple-react-lightbox
++ yarn add node-polyfill-webpack-plugin
 
 this `-D` switch create `devDependencies` section at `package.json` file
 ```
@@ -39,5 +42,13 @@ content: [
 <br/>
 
 # Demo <br/>
-<img src="./demo.gif" style="width: 100%"/>
+<img src="https://i.ibb.co/cNgLhPR/Click-Filter.gif" style="width: 100%"/>
 
+
+
+<!-- module.exports = {
+	const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+	plugins: [
+		new NodePolyfillPlugin()
+	],
+} -->

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Navbar, Product } from './components';
+import { SRLWrapper } from "simple-react-lightbox";
 import { data } from './constants';
+
 
 function App() {
 
@@ -16,14 +18,16 @@ function App() {
 
       <Navbar filterHandler={filterHandler} filter={filter} />
 
-      <section className="flex items-center justify-center flex-wrap">
-        {
-          filter === 'all'
-            ? data.pictureDB.slice(0).reverse().map(item => <Product key={item.title} item={item} />)
-            : data.pictureDB.map(item => item.tag === filter
-              && <Product key={item.title} item={item} />)
-        }
-      </section>
+      <SRLWrapper>
+        <section className="flex items-center justify-center flex-wrap">
+          {
+            filter === 'all'
+              ? data.pictureDB.slice(0).reverse().map(item => <Product key={item.title} item={item} />)
+              : data.pictureDB.map(item => item.tag === filter
+                && <Product key={item.title} item={item} />)
+          }
+        </section>
+      </SRLWrapper>
 
     </main>
   );
