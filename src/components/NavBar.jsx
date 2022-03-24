@@ -1,47 +1,33 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"
 
-const NavBar = () => {
+const NavBar = ({ filterHandler, filter }) => {
 
-    const [toggleNav, setToggleNav] = useState(false);
+  console.log(filter);
+  const links = [
+    { name: 'all' },
+    { name: 'blog' },
+    { name: 'coffee' },
+    { name: 'fruits' },
+    { name: 'place' },
+  ]
 
-    const links = [
-        { name: 'All Places', link: '/' },
-        { name: 'Add New Places', link: '/new-place' },
-        { name: 'Favorites', link: '/favorites' },
-    ]
+  const activeClick = links.filter(link => link.name === filter);
+  console.log(activeClick[0].name)
 
-    return (
-        <header className="fixed top-0 left-0 right-0 py-2 md:py-4 flex items-center justify-around bg-red-900 text-white">
-
-            <div className="text-3xl font-medium mr-auto md:mr-0 pl-4 ">
-                <Link to="/">Place's</Link>
-            </div>
-
-            <i onClick={() => setToggleNav(!toggleNav)}
-                className={`fas mr-4 text-2xl cursor-pointer md:hidden
-                ${toggleNav ? 'fa-times' : 'fa-bars'}`}></i>
-
-
-            <nav className={`absolute top-[110%] w-full flex flex-col text-xl duration-300 ease-in-out 
-                             md:static md:w-max md:flex-row md:space-x-10 md:on
-                             ${toggleNav ? 'on' : 'off'}`}>
-                {
-                    links.map((goTo, i) => (
-                        <Link
-                            key={i}
-                            to={goTo.link}
-                            onClick={() => setToggleNav(!toggleNav)}
-                            className="bg-red-800 mx-3 my-1 p-2 rounded 
-                            md:bg-transparent md:my-0 md:p-0  
-                            hover:text-gray-200 hover:underline decoration-red-300 underline-offset-4 duration-100">
-                            {goTo.name}
-                        </Link>
-                    ))
-                }
-            </nav>
-        </header>
-    );
+  return (
+    <ul className="flex items-center justify-center flex-wrap py-5 text-center">
+      {
+        links.map(link => (
+          <li
+            key={link.name}
+            onClick={() => filterHandler(link.name)}
+            className={`h-10 w-[140px] bg-white text-gray-800 cursor-pointer m-5 rounded shadow leading-10 text-lg capitalize duration-300 hover:bg-orange-400 hover:text-white 
+            ${ link.name === filter ? 'bg-orange-400 text-white' : ''}`}>
+            {link.name}
+          </li>
+        ))
+      }
+    </ul >
+  )
 }
 
-export default NavBar;
+export default NavBar

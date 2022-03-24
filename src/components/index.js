@@ -1,5 +1,7 @@
-import NavBar from "./NavBar";
+import Navbar from './Navbar';
+import Product from './Product';
 
 export {
-    NavBar,
+    Navbar,
+    Product,
 }

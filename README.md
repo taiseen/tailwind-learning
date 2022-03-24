@@ -1,13 +1,12 @@
-17 - March - 2022
+24 - March - 2022
 
-# Mobile Drop Down Menu - in React + Tailwind 
+# Filtering by click - in React + Tailwind 
 
 ## Project is created by React `Yarn`
 
 ## Package Installed... 
 
 + yarn create react-app testing
-+ yarn add react-router-dom
 + yarn add `-D` tailwindcss postcss autoprefixer 
 + npx tailwindcss init -p
 
@@ -37,14 +36,8 @@ content: [
 
 + if you clone this repo, <br> 1st must run ==> `yarn` 
 
-Font Awesome CDN link (v-6.1.0) use here.
-
 <br/>
 
-# Demo 1 <br/>
-<img src="./demo-1.gif" />
+# Demo <br/>
+<img src="./demo.gif" style="width: 100%"/>
 
-<br/>
-
-# Demo 2 <br/>
-<img src="./demo-2.gif" />

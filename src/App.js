@@ -1,19 +1,31 @@
-import { Routes, Route, } from "react-router-dom";
-import { NavBar } from "./components";
-import { AllPlaces, Favorites, NewPlace } from './pages';
+import { useState } from 'react';
+import { Navbar, Product } from './components';
+import { data } from './constants';
 
 function App() {
 
-  return (
-    <>
-      <NavBar />
+  const [filter, setFilter] = useState('all');
 
-      <Routes>
-        <Route path='/' element={<AllPlaces />} />
-        <Route path='/new-place' element={<NewPlace />} />
-        <Route path='/favorites' element={<Favorites />} />
-      </Routes>
-    </ >
+  const filterHandler = (item) => {
+    setFilter(item);
+  }
+
+  return (
+
+    <main className="all min-h-screen bg-gray-200 p-2 lg:p-8">
+
+      <Navbar filterHandler={filterHandler} filter={filter} />
+
+      <section className="flex items-center justify-center flex-wrap">
+        {
+          filter === 'all'
+            ? data.pictureDB.slice(0).reverse().map(item => <Product key={item.title} item={item} />)
+            : data.pictureDB.map(item => item.tag === filter
+              && <Product key={item.title} item={item} />)
+        }
+      </section>
+
+    </main>
   );
 
 }
