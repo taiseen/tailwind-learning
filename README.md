@@ -1,6 +1,6 @@
-24 - March - 2022
+25 - March - 2022
 
-# Filtering by click - in React + Tailwind 
+# Video Gallery - by - React + Tailwind 
 
 ## Project is created by React `Yarn`
 
@@ -8,10 +8,6 @@
 + yarn create react-app testing
 + yarn add `-D` tailwindcss postcss autoprefixer 
 + npx tailwindcss init -p
-
-## Need Full Plugins
-+ yarn add simple-react-lightbox
-+ yarn add node-polyfill-webpack-plugin
 
 this `-D` switch create `devDependencies` section at `package.json` file
 ```
@@ -42,13 +38,4 @@ content: [
 <br/>
 
 # Demo <br/>
-<img src="https://i.ibb.co/cNgLhPR/Click-Filter.gif" style="width: 100%"/>
-
-
-
-<!-- module.exports = {
-	const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
-	plugins: [
-		new NodePolyfillPlugin()
-	],
-} -->
+<img src="https://i.ibb.co/MkdpJjm/Video-Gallery.gif" style="width: 100%"/>

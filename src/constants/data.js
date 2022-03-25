@@ -1,91 +1,46 @@
-import images from './images';
+import videos from './videos';
 
-const pictureDB = [
+const videosDB = [
     {
-        title: 'blog 1',
-        img: images.blog1,
-        tag: 'blog'
+        title: 'Abstract Effect',
+        videoUrl: videos.video1,
     },
     {
-        title: 'blog 2',
-        img: images.blog2,
-        tag: 'blog'
+        title: 'Abstract Fire effect',
+        videoUrl: videos.video2,
     },
     {
-        title: 'blog 3',
-        img: images.blog3,
-        tag: 'blog'
+        title: 'Animated Earth Rounding',
+        videoUrl: videos.video3,
     },
     {
-        title: 'coffee 1',
-        img: images.coffee1,
-        tag: 'coffee'
+        title: 'Dinosaur',
+        videoUrl: videos.video4,
     },
     {
-        title: 'coffee 2',
-        img: images.coffee2,
-        tag: 'coffee'
+        title: 'DNA 3D Abstract Animation',
+        videoUrl: videos.video5,
     },
     {
-        title: 'coffee 3',
-        img: images.coffee3,
-        tag: 'coffee'
+        title: 'DNA Black',
+        videoUrl: videos.video6,
     },
     {
-        title: 'coffee 4',
-        img: images.coffee4,
-        tag: 'coffee'
+        title: 'Fog Flow-out',
+        videoUrl: videos.video7,
     },
     {
-        title: 'fruits 1',
-        img: images.fruits1,
-        tag: 'fruits'
+        title: 'Pair of Lungs',
+        videoUrl: videos.video8,
     },
     {
-        title: 'fruits 2',
-        img: images.fruits2,
-        tag: 'fruits'
+        title: 'Rocket NASA',
+        videoUrl: videos.video9,
     },
-    {
-        title: 'fruits 3',
-        img: images.fruits3,
-        tag: 'fruits'
-    },
-    {
-        title: 'fruits 4',
-        img: images.fruits4,
-        tag: 'fruits'
-    },
-    {
-        title: 'place 1',
-        img: images.place1,
-        tag: 'place'
-    },
-    {
-        title: 'place 2',
-        img: images.place2,
-        tag: 'place'
-    },
-    {
-        title: 'place 3',
-        img: images.place3,
-        tag: 'place'
-    },
-    {
-        title: 'place 4',
-        img: images.place4,
-        tag: 'place'
-    },
-    {
-        title: 'place 5',
-        img: images.place5,
-        tag: 'place'
-    },
-    
 ];
 
 const data = {
-    pictureDB,
+    videosDB,
 }
 
 export default data;

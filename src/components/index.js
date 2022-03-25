@@ -1,7 +1,7 @@
-import Navbar from './Navbar';
-import Product from './Product';
+import VideoList from './VideoList';
+import VideoPlay from './VideoPlay';
 
 export {
-    Navbar,
-    Product,
+    VideoList,
+    VideoPlay,
 }

@@ -1,37 +1,37 @@
 import { useState } from 'react';
-import { Navbar, Product } from './components';
-import { SRLWrapper } from "simple-react-lightbox";
+import { VideoList, VideoPlay } from './components';
 import { data } from './constants';
 
 
 function App() {
 
-  const [filter, setFilter] = useState('all');
+  const [videoObj, setVideoObj] = useState({});
 
-  const filterHandler = (item) => {
-    setFilter(item);
+  const clickHandler = (obj) => {
+    setVideoObj(obj);
   }
 
   return (
 
-    <main className="all min-h-screen bg-gray-200 p-2 lg:p-8">
+    <main className="max-w-7xl mx-auto mt-20 flex items-start flex-wrap gap-5">
 
-      <Navbar filterHandler={filterHandler} filter={filter} />
+      <VideoPlay videoObj={videoObj} />
 
-      <SRLWrapper>
-        <section className="flex items-center justify-center flex-wrap">
-          {
-            filter === 'all'
-              ? data.pictureDB.slice(0).reverse().map(item => <Product key={item.title} item={item} />)
-              : data.pictureDB.map(item => item.tag === filter
-                && <Product key={item.title} item={item} />)
-          }
-        </section>
-      </SRLWrapper>
+      <section className="w-[350px] h-[504px]  flex-auto  bg-white overflow-y-scroll p-4 rounded shadow scrollbar space-y-4">
+        {
+          data.videosDB.map(video => (
+            <VideoList
+              key={video.title}
+              video={video}
+              clickHandler={clickHandler}
+              videoObj={videoObj}
+            />
+          ))
+        }
+      </section>
 
     </main>
   );
-
 }
 
 export default App;
