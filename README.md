@@ -1,54 +1,23 @@
-> 3 - Jun - 2022
+> 9 - Jun - 2022
 
-# Tailwind | NavBar + SideBar + SideBarPages
+# 
 
-## Demo 
-<img src='./src/constants/screen_shot_2022_06_04.png' />
+## yarn add react-typed
 
 
-<br />
-
-# Git Branches System...
-
+## Renaming | Git Branches System...
 
 `git branch`
 
 
-> 1
+* If you are on a different branch:
 ```
-git checkout -b <Your-Given-Branch-Name>
+git branch -m <Old-Name> <New-Name>
 ```
+<br/>
 
-> 2
-``` 
-git rm -rf .
-```
+* Push the changes || Renaming remote branch:
 
-> 3
 ```
-git commit -am 'remove all file from parent branch'
-```
-
-*** 
-
-> 4
-```
-git status
-```
-
-`Go & copy past here, your other project files source code`
-
-> 5
-```
-git add .
-```
-
-> 6
-```
-git commit -am 'Your Logical Message ==> OK'
-```
-
-> 7
-```
-git push origin <Your-Given-Branch-Name>
+git push origin :<Old-Name> <New-Name>
 ```

@@ -1,14 +1,16 @@
-import { BrowserRouter } from 'react-router-dom';
-import { MainPage } from './components';
+import { About, Contact, Header, Home, Service, Work } from "./components"
 
 const App = () => {
 
   return (
-    <BrowserRouter>
-
-      <MainPage />
-      
-    </BrowserRouter>
+    <>
+      <Header />
+      <Home />
+      <About />
+      <Service />
+      <Work />
+      <Contact />
+    </>
   )
 }
 
