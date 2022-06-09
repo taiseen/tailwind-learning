@@ -1,8 +1,8 @@
 > 9 - Jun - 2022
 
-# 
+# Portfolio - Tailwind | [Live Link](https://taiseen-tailwind.netlify.app)
 
-## yarn add react-typed
+* yarn add react-typed
 
 
 ## Renaming | Git Branches System...
