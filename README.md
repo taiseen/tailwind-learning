@@ -7,8 +7,6 @@
 
 # React + TailwindCSS
 
-* yarn add aos
-
 
 ## Learning context by developing this app:
 |No| Context learn by building this project...      | 
@@ -20,4 +18,6 @@
 | 5| Auto detect user screen & ui render according to that | 
 
 
-<img src='' />
+## Demo
+
+<img src='https://i.ibb.co/GQtys6c/Burger-UI.jpg' />
