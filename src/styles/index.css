@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --yellow      : #e7c520;
+    --white       : #ffffff;
+    --black       : #000000;
+    --lightColor  : #aaaaaa;
+    --border      : 1px solid rgba(255, 255, 255, .3);
+    --servicesGrid: 300px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html {
+        scroll-behavior   : smooth;
+        scroll-padding-top: 60px;
+    }
+
+    html::-webkit-scrollbar {
+        width: .8rem;
+    }
+
+    html::-webkit-scrollbar-track {
+        background: black;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background   : var(--yellow);
+        border-radius: .2rem;
+    }
+
+    body {
+        font-family          : 'Nunito', sans-serif;
+        background-image     : url('../assets/background.jpg');
+        background-position  : center;
+        background-attachment: fixed;
+        overflow-x           : hidden;
+    }
+}
+
+@layer utilities {
+
+    .icons {
+        @apply text-2xl cursor-pointer text-white hover:text-yellow-400
+    }
+
+    .links {
+        @apply text-white text-base mx-6 my-2 block py-3 text-center rounded-md bg-gray-700/40 capitalize
+        md:text-xl lg:inline lg:text-2xl lg:bg-black lg:lowercase duration-300
+        lg:hover:underline lg:hover:underline-offset-4 lg:hover:text-yellow-500
+    }
+
+    .off {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .on {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .gridAutoFit {
+        display              : grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--servicesGrid), 1fr));
+        gap                  : 2rem;
+    }
+
+    .section {
+        @apply py-16 px-2 md:px-[9%];
+    }
+
+    .btn{
+        @apply inline-block mt-6 cursor-pointer text-xl py-3 px-6 lg:px-6 border border-gray-100/40 duration-300 hover:text-black hover:bg-white capitalize
+    }
+
+    .inputBox{
+        @apply w-full px-4 py-3 text-lg text-white bg-transparent border outline-none border-gray-600 focus:border-yellow-400 mb-2 duration-500
+    }
+    
+}
