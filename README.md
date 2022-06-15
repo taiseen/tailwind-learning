@@ -2,7 +2,7 @@
 
 
 ## Burger Shop | [Live Link][link]
-[link]: www 
+[link]: https://burger-ui.netlify.app 
 
 
 # React + TailwindCSS
